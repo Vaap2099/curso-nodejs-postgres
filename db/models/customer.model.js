@@ -51,7 +51,7 @@ class Customer extends Model {
     this.hasMany(models.Order, {
       as: 'orders',
       foreignKey: 'customerId'
-    })
+    });
   }
 
   static config(sequelize) {
@@ -63,5 +63,3 @@ class Customer extends Model {
     }
   }
 }
-
-module.exports = { Customer, CustomerSchema, CUSTOMER_TABLE };
